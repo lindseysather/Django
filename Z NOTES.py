@@ -1,6 +1,8 @@
 '''
 2 types of requests:
 
+
+QUESTION ON INTERVIEW:
 *****
 get request: initally web page is loaded: getting information from the database
 post request: sends information to the database so it can post it (make changes) (update address)
@@ -31,4 +33,8 @@ PASSWORD = yorkie12
 to add stuff to database: make migration, migrate
 
 
+
+URL points to view
+View acts as a function for database
+View uses template
 '''
