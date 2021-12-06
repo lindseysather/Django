@@ -1,9 +1,11 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Topic(models.Model):
     text = models.CharField(max_length=200)
     date_added = models.DateTimeField(auto_now_add=True)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
 
     #string method to show text of topic 
     def __str__(self):
@@ -22,6 +24,7 @@ class Entry(models.Model):
         #returns first 50 characters of text
         return f"{self.text[:50]}..."
 
+'''KNOW THIS!!!!!!'''
 #To change database:
     #python manage.py makemigrations
     #python manage.py migrate
