@@ -35,6 +35,8 @@ INSTALLED_APPS = [
     #add every time you set up a new app
     'MainApp',
     'users',
+    #third party apps
+    'bootstrap4',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

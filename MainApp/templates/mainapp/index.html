@@ -1,10 +1,24 @@
 {% extends "MainApp/base.html" %}
 
-{% block content %}
+<!--tell Django we're about to define what goes in page_haeder-->
+{% block page_header %}
 
+<!--jumbotron applies this group of styling from Bootstrap to this element-->
+<div class="jumbotron">
+    
+<!--first-level header-->
+  <h1 class="display-3">Track your learning.</h1>
 
-<p>
-    Learning log helps you to keep track of your learning for any topic you're learning about. 
-</p>
+<!--message-->
+    <p class="lead">Make your own Learning Log, and keep a list of the
+       topics you're learning about. Whenever you learn something new
+       about a topic, make an entry summarizing what you've learned.</p>
 
-{% endblock content %}
+<!--create a button that invites users to register their account-->
+    <a class="btn btn-lg btn-primary" href="{% url 'users:register' %}"
+   role="button">Register &raquo;</a>
+ </div>
+
+<!--close the page_header block-->
+{% endblock page_header %}
+
