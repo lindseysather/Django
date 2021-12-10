@@ -46,7 +46,8 @@ def new_topic(request):
             new_topic = form.save(commit=False)
             new_topic.owner = request.user
             new_topic.save()
-            return redirect('learning_log:topics')
+            #used to be learning_log - check
+            return redirect('MainApp:topics')
             
             '''
             form.save()

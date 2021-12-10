@@ -7,17 +7,17 @@
 
 {% block content %}
 <ul>
-    {% for t in topics %}
+    {% for topic in topics %}
 
     <!--style each topic as an <h3> element to make them larger on the page-->
     <li><h3>
-        <a href="{% url 'MainApp:topic' t.id %}">{{ t }}</a>
+        <a href="{% url 'MainApp:topic' topic.id %}">{{ topic }}</a>
     </h3></li>
     {% empty %}
-    <li><h3>No topics have been added yet</h3></li>
+    <li><h3>No topics have been added yet.</h3></li>
     {% endfor %}
 </ul>
 
-<h3><a href="{% url 'MainApp:new_topic' %}"Add a new topic</a></h3>
+<h3><a href="{% url 'MainApp:new_topic' %}">Add a new topic</a></h3>
 
 {% endblock content %}
